@@ -67,7 +67,7 @@ function App() {
         setCountryInfo(data);
         setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
        setMapZoom(3);
-      if (typeof data.countryInfo !== "worldwide") {
+      if (typeof data.countryInfo !== "") {
         setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
       }
       
