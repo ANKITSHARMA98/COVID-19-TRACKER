@@ -22,7 +22,7 @@ function App() {
   useEffect(() => {
     fetch('https://disease.sh/v3/covid-19/all')
     .then(response => response.json())
-    .then(data =>{
+    .then((data) => {
       setCountryInfo(data);
     });
     
@@ -66,7 +66,7 @@ function App() {
         setCountry(countryCode);
         setCountryInfo(data);
         setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
-      setMapZoom(3);
+       setMapZoom(3);
       if (typeof data.countryInfo !== "undefined") {
         setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
       }
